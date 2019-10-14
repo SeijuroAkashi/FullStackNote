@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    class Person {
+        constructor(a, b) {
+            this.a = a
+            this.b = b
+        }
+
+        show() {
+            alert(this.a + this.b)
+        }
+    }
+
+    class Worker extends Person {
+        constructor(a,b,job) {
+            super(a,b);
+            this.job = job
+        }
+
+        show() {
+            alert(this.job+this.a+this.b)
+        }
+    }
+
+    let p1 = new Person(1, 2);
+    p1.show()
+    let w1 = new Worker(4, 5,'555');
+    w1.show()
+</script>
+</body>
+</html>
